@@ -31,11 +31,23 @@
     </div>
 
     <div id="introduction-illustration-container">
-      <img src="assets/lines.svg" alt="Person using computer" id="recs">
-      <img src="assets/kid_computer.svg" alt="Person using computer" id="kid">
+      <picture id="recs">
+        <source media="(max-height: 660px)" srcset="assets/Kid/Recs/lines_s.svg" alt="Person using computer" >
+          <img src="assets/Kid/Recs/lines.svg" alt="Person using computer">
+      </picture>
+      <picture id="kid">
+        <source media="(max-height: 660px)" srcset="assets/Kid/kid/kid_computer_s.svg" alt="Person using computer">
+        <img src="assets/Kid/kid/kid_computer.svg" alt="Person using computer">
+      </picture>
       <div id="introduction-illustration-with-parallax">
-        <img data-depth="1.2" src="assets/Icons.svg" alt="Symbols" id="symbols">
-        <img data-depth="0.8" src="assets/windows.svg" alt="Computer windows" id="windows">
+        <picture data-depth="1.2" id="symbols">
+          <source media="(max-height: 660px)" srcset="assets/Kid/clouds/Icons_s.svg" alt="Symbols">
+          <img src="assets/Kid/clouds/Icons.svg" alt="Symbols">
+        </picture>
+        <picture data-depth="0.8" id="windows">
+          <source  media="(max-height: 660px)" srcset="assets/Kid/windows/windows.svg" alt="Computer windows" >
+          <img src="assets/Kid/windows/windows.svg" alt="Computer windows">
+        </picture>
       </div>
     </div>
   </section>

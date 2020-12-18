@@ -129,28 +129,28 @@ section#introduction div#introduction-illustration-container {
   position: relative;
 }
 
-section#introduction div#introduction-illustration-container img#recs {
+section#introduction div#introduction-illustration-container picture#recs {
   position: absolute;
   right: 0;
   top: 0;
   z-index: -2;
 }
 
-section#introduction div#introduction-illustration-container img#kid {
+section#introduction div#introduction-illustration-container picture#kid {
   position: absolute;
   right: 105px;
   top: 230px;
   z-index: -1;
 }
 
-section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax img#symbols {
+section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax picture#symbols {
   position: absolute !important;
   margin-top: 98px;
   margin-left: 95px;
   z-index: 3;
 }
 
-section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax img#windows {
+section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax picture#windows {
   position: absolute !important;
   margin-top: 125px;
   margin-left: 80px;
@@ -176,13 +176,14 @@ section#what-i-do div#text-content strong {
   color: #4C40F7;
   font-size: 22px;
   opacity: 0;
+  margin-top: 40px;
   will-change: opacity, margin-top;
   transition: margin-top .5s .2s,
               opacity .5s .1s;
 }
 
 section#what-i-do div#text-content strong.is-visible {
-  margin-top: 20px;
+  margin-top: 0;
   opacity: 1;
 }
 
@@ -199,7 +200,6 @@ section#what-i-do div#text-content h3 {
 }
 
 section#what-i-do div#text-content h3.is-visible {
-  margin-top: -6%;
   opacity: 1;
   line-height: 63px;
 }
@@ -220,8 +220,8 @@ section#what-i-do div#text-content h2 {
 
 section#what-i-do div#text-content button {
   margin-top: 40px;
-  height: 92px;
-  width: 337px;
+  height: 92px !important;
+  width: 337px !important;
   background-color: #4C40F7;
   color: white;
   font-weight: bold;
@@ -239,6 +239,8 @@ section#what-i-do div#text-content button {
 }
 
 section#what-i-do div#text-content button.is-visible {
+  height: 92px !important;
+  width: 337px !important;
   opacity: 1;
 }
 
@@ -378,4 +380,42 @@ section#cards div.glide__arrows button {
 section#cards div.glide__arrows button + button {
   margin-right: 0;
   margin-left: 10px;
+}
+
+@media (max-height: 660px) {
+  section#introduction div#introduction-illustration-container picture#kid {
+    position: absolute;
+    right: 85px;
+    top: 200px;
+    z-index: -1;
+  }
+  
+  section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax picture#symbols {
+    position: absolute !important;
+    margin-top: 80px;
+    margin-left: 105px;
+    z-index: 3;
+  }
+  
+  section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax picture#windows {
+    position: absolute !important;
+    margin-top: 70px;
+    margin-left: 24px;
+    z-index: 4;
+  }
+
+  section#what-i-do div#text-content h2 {
+    font-size: 50px;
+    max-width: 400px;
+    margin-top: 6%;
+  }
+
+  section#what-i-do div#text-content h2.is-visible {
+    line-height: 90px;
+  }
+
+  section#what-i-do div#text-content button {
+    height: 85px;
+    width: 311px;
+  }
 }
