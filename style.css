@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #FCFCFD;
+  overflow-x: hidden;
+}
+
+header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  margin-left: 3%;
+  font-weight: 900;
+}
+
+header nav {
+  margin-left: 115px;
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1px);
+  height: 3px;
+  background-color: #9F9FA9;
+  opacity: 0;
+  width: 0;
+  transition: width .4s .1s,
+              opacity .4s .2s;
+  will-change: opacity, width
+}
+
+header nav a:hover::after {
+  opacity: 1;
+  width: 100px;
+}
+
+header nav a + a {
+  margin-left: 100px;
+}
+
+header nav a p {
+  margin-left: 10px;
+  color: #9F9FA9;
+  font-size: 16px;
+}
+
+section {
+  padding-left: 7vw;
+  min-height: 100vh;
+  max-height: 150vh;
+}
+
+section#introduction {
+  height: 85vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section#introduction div#introduction-text-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section#introduction div#introduction-text-container strong {
+  color: #4C40F7;
+  font-size: 22px;
+  margin-top: 100px;
+  opacity: 0;
+  will-change: opacity, margin-top;
+  transition: margin-top .5s .2s,
+              opacity .5s .1s;
+}
+
+section#introduction div#introduction-text-container strong.is-visible {
+  margin-top: 0;
+  opacity: 1;
+}
+
+section#introduction div#introduction-text-container h2 {
+  margin-bottom: -30px;
+  font-weight: 700;
+  font-size: 43px;
+  max-width: 427px;
+  opacity: 0;
+  line-height: 90px;
+  will-change: opacity, margin-bottom, line-height;
+  transition: margin-bottom .5s .2s,
+              opacity .8s .1s,
+              line-height .7s .3s;
+}
+
+section#introduction div#introduction-text-container h2.is-visible {
+  opacity: 1;
+  margin-top: 0;
+  line-height: 65px;
+}
+
+section#introduction div#introduction-illustration-container {
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+section#introduction div#introduction-illustration-container img#recs {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}
+
+section#introduction div#introduction-illustration-container img#kid {
+  position: absolute;
+  right: 105px;
+  top: 230px;
+  z-index: -1;
+}
+
+section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax img#symbols {
+  position: absolute !important;
+  margin-top: 98px;
+  margin-left: 95px;
+  z-index: 3;
+}
+
+section#introduction div#introduction-illustration-container div#introduction-illustration-with-parallax img#windows {
+  position: absolute !important;
+  margin-top: 125px;
+  margin-left: 80px;
+  z-index: 4;
+}
+
+section#what-i-do {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+section#what-i-do div#text-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+section#what-i-do div#text-content strong {
+  color: #4C40F7;
+  font-size: 22px;
+  opacity: 0;
+  will-change: opacity, margin-top;
+  transition: margin-top .5s .2s,
+              opacity .5s .1s;
+}
+
+section#what-i-do div#text-content strong.is-visible {
+  margin-top: 20px;
+  opacity: 1;
+}
+
+section#what-i-do div#text-content h3 {
+  font-weight: 500;
+  font-size: 42px;
+  max-width: 779px;
+  opacity: 0;
+  line-height: 90px;
+  will-change: opacity, margin-top, line-height;
+  transition: margin-top .5s .2s,
+              opacity .8s .1s,
+              line-height .7s .3s;
+}
+
+section#what-i-do div#text-content h3.is-visible {
+  margin-top: -6%;
+  opacity: 1;
+  line-height: 63px;
+}
+
+section#what-i-do div#text-content h2 {
+  font-weight: 700;
+  max-width: 604px;
+  font-size: 80px;
+  margin-top: 14%;
+  margin-bottom: -60px;
+  line-height: 160px;
+  opacity: 0;
+  will-change: opacity, margin-bottom, line-height;
+  transition: margin-bottom .5s .2s,
+              opacity .8s .1s,
+              line-height .7s .3s;
+}
+
+section#what-i-do div#text-content button {
+  margin-top: 40px;
+  height: 92px;
+  width: 337px;
+  background-color: #4C40F7;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  border: 0;
+  opacity: 0;
+  border-radius: 17px;
+  will-change: opacity, background-color;
+  transition: opacity .5s .2s,
+              background-color .3s;
+}
+
+section#what-i-do div#text-content button.is-visible {
+  opacity: 1;
+}
+
+section#what-i-do div#text-content button:hover{
+  background-color: #3a31b9;
+}
+
+section#what-i-do div#text-content h2.is-visible {
+  margin-bottom: 0;
+  opacity: 1;
+  line-height: 120px;
+}
+
+section#what-i-do div#what-i-do-illustration-container {
+  position: absolute;
+  right: 6%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+section#what-i-do div#what-i-do-illustration-container div#what-i-do-illustration {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+section#what-i-do div#what-i-do-illustration-container div#what-i-do-illustration img#splash {
+  position: absolute;
+  right: 0;
+  z-index: -2;
+}
+
+section#what-i-do div#what-i-do-illustration-container div#what-i-do-illustration div#illustrations-with-parallax {
+  position: absolute;
+  z-index: -1;
+  right: 25px;
+  width: 305px;
+  height: 235px;
+  display: flex;
+  flex-direction: row;
+}
+
+section#what-i-do div#what-i-do-illustration-container div#what-i-do-illustration div#illustrations-with-parallax img#pencil {
+  margin-bottom: 52%;
+  margin-right: 13%;
+}
+
+section#what-i-do div#what-i-do-illustration-container div#what-i-do-illustration div#illustrations-with-parallax img#mouse {
+  margin-left: 65%;
+  margin-top: 10%;
+}
+
+section#cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide {
+  height: 514px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 14px 42px 14px;
+  will-change: background-color, box-shadow;
+  transition: background-color .3s .1s,
+  box-shadow .4s .2s;
+}
+
+section#cards div.glide {
+  width: 926px;  
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide strong {
+  font-size: 16px;
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide p {
+  margin-left: 10px;
+  text-align: center;
+  color: #9D9D9D;
+  font-size: 14px;
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide:hover {
+  background-color: #fff;
+  box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, .25);
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide button {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+  width: 189px;
+  height: 62px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #4C40F7;
+  border: 0;
+  border-radius: 11px;
+  opacity: 0;
+  transition: background-color .3s,
+              opacity .5s .2s;
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide button:hover {
+  background-color: #3a31b9;
+}
+
+section#cards div.glide div.glide__track ul.glide__slides li.glide__slide:hover button {
+  opacity: 1;
+}
+
+section#cards div.glide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+section#cards div.glide__arrows button {
+  background-color: transparent;
+  margin-right: 10px;
+  border: 0;
+}
+
+section#cards div.glide__arrows button + button {
+  margin-right: 0;
+  margin-left: 10px;
+}

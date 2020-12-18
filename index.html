@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="glide.core.min.css">
+  <title>Portfólio - Matheus Acfer</title>
+</head>
+<body>
+  <header>
+    <h1>M_Acfer</h1>
+
+    <nav>
+      <a href="https://github.com/acferM" target="blank">
+        <img src="assets/Icons/github_gray.svg" alt="Github">
+        <p>Github</p>
+      </a>
+
+      <a href="https://www.linkedin.com/in/matheus-acfer-de-fran%C3%A7a-silva-a7b7941b2/" target="blank">
+        <img src="assets/Icons/linkedin.svg" alt="Github">
+        <p>linkedIn</p>
+      </a>
+    </nav>
+  </header>
+
+  <section id="introduction">
+    <div id="introduction-text-container">
+      <strong class="show-on-scroll" >Matheus Acfer</strong>
+      <h2 class="show-on-scroll" >Hi, My name is Matheus, i’m a software engineer.</h2>
+    </div>
+
+    <div id="introduction-illustration-container">
+      <img src="assets/lines.svg" alt="Person using computer" id="recs">
+      <img src="assets/kid_computer.svg" alt="Person using computer" id="kid">
+      <div id="introduction-illustration-with-parallax">
+        <img data-depth="1.2" src="assets/Icons.svg" alt="Symbols" id="symbols">
+        <img data-depth="0.8" src="assets/windows.svg" alt="Computer windows" id="windows">
+      </div>
+    </div>
+  </section>
+
+  <section id="what-i-do">
+    <div id="text-content">
+      <strong class="show-on-scroll">What i do</strong>
+      <h3 class="show-on-scroll" >I spend my time creating softwares to make people’s life easier</h3>
+
+      <h2 class="show-on-scroll">Think. Create. Test. Develop.</h2>
+
+      <button class="show-on-scroll">Talk with me <img src="assets/Icons/arrow_right.svg" alt="Arrow Right"></button>
+    </div>
+
+    <div id="what-i-do-illustration-container">
+      <div id="what-i-do-illustration">
+        <img src="assets/splash.svg" alt="splash" id="splash">
+        <div id="illustrations-with-parallax">
+          <img data-depth="0.4" src="assets/pencil.svg" alt="pencil" id="pencil">
+          <img data-depth="0.6" src="assets/keyboard.svg" alt="keyboard" id="keyboard">
+          <img data-depth="0.4" src="assets/mouse.svg" alt="mouse" id="mouse">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cards">
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img src="assets/Cards/backend.svg" alt="backend">
+            <strong>Backed-end developer</strong>
+            <p>I create well structured Rest Full Apis using NodeJS to be used on my apps</p>
+            <button>
+              See projects
+              <img src="assets/Cards/github.svg" alt="github">
+            </button>
+          </li>
+
+          <li class="glide__slide">
+            <img src="assets/Cards/frontend.svg" alt="frontend">
+            <strong>Front-end developer</strong>
+            <p>Using ReactJS or NextJS, I develop web pages lke this one, to be used by anyone.</p>
+            <button>
+              See projects
+              <img src="assets/Cards/github.svg" alt="github">
+            </button>
+          </li>
+
+          <li class="glide__slide">
+            <img src="assets/Cards/mobile.svg" alt="mobile">
+            <strong>Mobile developer</strong>
+            <p>With ReactNative, i create mobile apps that works in Android and IO.S at the same time</p>
+            <button>
+              See projects
+              <img src="assets/Cards/github.svg" alt="github">
+            </button>
+          </li>
+
+          <li class="glide__slide">
+            <img src="assets/Cards/unity.svg" alt="unity">
+            <strong>Game Creator</strong>
+            <p>Using C# + Unity, i can develop either 2D and 3D games, creating gameplay and some VFX</p>
+            <button>
+              See projects
+              <img src="assets/Cards/github.svg" alt="github">
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="assets/Cards/previous.svg" alt="previous"></button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="assets/Cards/next.svg" alt="next"></button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="scripts/parallaxManager.js"></script>
+  <script src="scripts/scrollShowController.js"></script>
+
+  <script>
+    const config = {
+      type: 'carousel',
+      perView: 3,
+      gap: 106
+    }
+    new Glide('.glide', config).mount()
+  </script>
+</body>
+</html>
